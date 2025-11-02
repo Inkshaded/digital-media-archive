@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import filedialog
 
+# TODO: Seperate browseFiles function from ui
 def browseFiles():
     filename = filedialog.askopenfilename(initialdir = "/",
                                             title = "Select a File",
