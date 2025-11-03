@@ -26,10 +26,21 @@ Storage, RecordStore, and FileSelector can all be extended, as they are utilized
 Any implementation of Storage, FileSelector, or RecordStore can be implemented through the controller_interface.py definitions
 
 ### Interface Segregation Principle
+The interfaces in the program are kept tiny and seperate from one another, minimizing dependencies.
 
+ArchiveApp (controller) <br>
+|-- depends on -> FileSelector.select_file() <br>
+|-- depends on -> Storage.save() <br>
+|-- depends on -> RecordStore.append(), RecordStore.read_tail <br>
+
+    TkFileSelector ->  implements -> FileSelector
+
+    LocalStorage ->  implements -> Storage
+
+    CsvRecordStore -> implements -> RecordStore
 
 ### Dependency Inversion Principle
-
+The high-level controller only relies on the abstractions of the FileSelector, Storage, and RecordStore interfaces. The actual details of how the concrete implementations work only matter at the lower level and are therefore only accessed there. For example, LocalStorage implementation can be directly applied to the program through the Storage interface, but not vice versa.
 
 ## Other Design Patterns
 
