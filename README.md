@@ -22,5 +22,3 @@ From the project root, run:
 ```bash
 python main.py
 ```
-
-From there, simply
