@@ -1,5 +1,5 @@
 import os
-from tkinter import filedialog, messagebox
+from tkinter import filedialog
 
 
 def select_file():
@@ -19,5 +19,4 @@ def save_uploaded_file(file_path, destination_folder="archive"):
         return dest_path
     
     except Exception as e:
-        messagebox.showerror("Error", f"Failed to copy {file_path}:\n{e}")
-        return None
+        raise RuntimeError(f"Failed to copy {file_path}: {e}")

@@ -18,9 +18,11 @@ class ArchiveApp:
         
         self.gui.update_selected_file(file_path)
 
-        saved_path = file_utility.save_uploaded_file(file_path, destination_folder="archive")
-        if saved_path:
+        try:
+            saved_path = file_utility.save_uploaded_file(file_path, destination_folder="archive")
             messagebox.showinfo("Success", f"Archived file to:\n{saved_path}")
+        except RuntimeError as e:
+            messagebox.showerror("Error", str(e))
 
 def main():
     root = tk.Tk()
