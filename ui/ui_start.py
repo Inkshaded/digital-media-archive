@@ -27,7 +27,7 @@ class ArchiveUI:
         )
         self.file_listbox.pack(pady=12, padx=10, fill="x")
 
-        # --- Helpers for controller ---
+    # --- Helpers for controller ---
     def update_selected_file(self, file_path: str):
         """Replace the list contents with a single selected file path."""
         self.file_listbox.delete(0, tk.END)
