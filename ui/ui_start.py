@@ -18,6 +18,7 @@ class ArchiveUI:
         self.upload_button = tk.Button(root, text="Upload Files", command=self.app_logic.upload_file)
         self.upload_button.pack()
 
+        # -- Upload Listbox --
         self.file_listbox = tk.Listbox(
             root,
             width=50,
