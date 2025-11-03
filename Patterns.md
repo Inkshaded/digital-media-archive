@@ -28,10 +28,14 @@ Any implementation of Storage, FileSelector, or RecordStore can be implemented t
 ### Interface Segregation Principle
 The interfaces in the program are kept tiny and seperate from one another, minimizing dependencies.
 
-ArchiveApp (controller) <br>
-|-- depends on -> FileSelector.select_file() <br>
-|-- depends on -> Storage.save() <br>
-|-- depends on -> RecordStore.append(), RecordStore.read_tail <br>
+Existing dependencies:
+```
+ArchiveApp (controller)
+|-- depends on -> FileSelector.select_file()
+|-- depends on -> Storage.save() 
+|-- depends on -> RecordStore.append(), RecordStore.read_tail
+```
+Implementations:
 
     TkFileSelector ->  implements -> FileSelector
 
