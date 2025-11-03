@@ -1,28 +1,33 @@
 # Design Patterns
 ## SOLID Design Principles
 ### Single Responsibility Principle
+Below, all functional program files will be summarised simply to demonstrate adherence to the Single Responsibility Principle
 ```
 Program Files
 
-main.py : Controls program/user actions
+implementations/ # holds concrete behaviors
+    local_storage.py : Implementation of Storage that archives files locally
+    tkinter_file_selector.py : Implementation of FileSelector that opens a
+    tkinter dialog box to select a file
 
 ui/
-    ui_start.py : Manages GUI
+    ui_start.py : Handles Tkinter UI layout and updates
 
-utility/
-    file_utility.py : Manages file operations
+controller_interface.py : defines abstractions for FileSelector and Storage
+
+main.py : Acts as controller, in charge of interactions between UI and logic
 ```
 ### Open/Closed Principle
-Currently falls short
+The ArchiveApp class (controller) is only dependent on the FileSelector and Storage abstract interfaces, meaning that the controller does not need to be changed to modify the implementation of the program.
 
 ### Liskov Substitution Principle
-Currently not applicable due to lack of abstraction
+
 
 ### Interface Segregation Principle
-Currently falls short
+
 
 ### Dependency Inversion Principle
-Currently falls short
+
 
 ## Other Design Patterns
 
