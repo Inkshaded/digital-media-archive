@@ -35,7 +35,7 @@ ArchiveApp (controller)
 |-- depends on -> Storage.save() 
 |-- depends on -> RecordStore.append(), RecordStore.read_tail
 ```
-Implementations:
+Implementations of interfaces:
 
     TkFileSelector ->  implements -> FileSelector
 
