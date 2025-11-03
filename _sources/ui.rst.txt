@@ -1,0 +1,21 @@
+ui package
+==========
+
+Submodules
+----------
+
+ui.ui\_start module
+-------------------
+
+.. automodule:: ui.ui_start
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: ui
+   :members:
+   :undoc-members:
+   :show-inheritance:
