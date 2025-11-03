@@ -1,7 +1,14 @@
 import tkinter as tk
-from tkinter import messagebox
+from tkinter import messagebox, filedialog
 from ui.ui_start import ArchiveUI
 from utility import file_utility
+
+def select_file():
+    path = filedialog.askopenfilename(
+        title="Select a File",
+        filetypes=[("All Files", "*.*")]
+    )
+    return path if path else None
 
 # TODO: Seperate ArchiveApp controller from main.py
 class ArchiveApp:
@@ -11,13 +18,15 @@ class ArchiveApp:
         self.gui = ArchiveUI(root, app_logic=self)
 
     def upload_file(self):
-        file_path = file_utility.select_file()
+        file_path = select_file()
         if not file_path:
             messagebox.showinfo("No Selection", "No file was selected.")
             return
         
+        #Update view
         self.gui.update_selected_file(file_path)
 
+        #File-saving logic (managed by file_utility)
         try:
             saved_path = file_utility.save_uploaded_file(file_path, destination_folder="archive")
             messagebox.showinfo("Success", f"Archived file to:\n{saved_path}")

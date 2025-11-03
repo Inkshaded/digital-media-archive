@@ -1,13 +1,5 @@
 import os
-from tkinter import filedialog
 
-
-def select_file():
-    path = filedialog.askopenfilename(
-        title="Select a File",
-        filetypes=[("All Files", "*.*")]
-    )
-    return path if path else None
 
 def save_uploaded_file(file_path, destination_folder="archive"):
     try:
@@ -16,6 +8,7 @@ def save_uploaded_file(file_path, destination_folder="archive"):
         dest_path = os.path.join(destination_folder, filename)
         with open(file_path, 'rb') as src, open(dest_path, 'wb') as dst:
             dst.write(src.read())
+            
         return dest_path
     
     except Exception as e:
