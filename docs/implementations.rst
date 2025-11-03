@@ -1,0 +1,37 @@
+implementations package
+=======================
+
+Submodules
+----------
+
+implementations.csv\_record\_store module
+-----------------------------------------
+
+.. automodule:: implementations.csv_record_store
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+implementations.local\_storage module
+-------------------------------------
+
+.. automodule:: implementations.local_storage
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+implementations.tk\_file\_selector module
+-----------------------------------------
+
+.. automodule:: implementations.tk_file_selector
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: implementations
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,30 @@
+.. Digital Media Archiving System documentation master file, created by
+   sphinx-quickstart on Mon Nov  3 07:52:26 2025.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Digital Media Archiving System documentation
+============================================
+
+Add your content using ``reStructuredText`` syntax. See the
+`reStructuredText <https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html>`_
+documentation for details.
+
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+
+   modules
+
+Project Overview
+----------------
+This is a digital media archiving system meant to log and archive your personal media digitally
+
+Modules
+-------
+
+* :mod:`main` - Application controller and entry point.
+* :mod:`controller_interface` - Interfaces for file selection, storage, and record-keeping.
+* :mod:`implementations` - Concrete implementations of system behaviors.
+* :mod:`ui` - Tkinter-based GUI.

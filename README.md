@@ -22,3 +22,6 @@ From the project root, run:
 ```bash
 python main.py
 ```
+
+## Documentation Website
+https://inkshaded.github.io/digital-media-archiving-system/
